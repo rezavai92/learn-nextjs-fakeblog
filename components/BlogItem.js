@@ -2,6 +2,7 @@ import React from 'react'
 import style from '../styles/blogitem.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+
 export default function BlogItem({blog,photo}) {
     return (
         <div  key={blog.id}>
@@ -11,9 +12,9 @@ export default function BlogItem({blog,photo}) {
             <h2>
                   {blog.title}
               </h2>
-              <img src={photo.url} width="200px" height="200px" >
+             <Image src={photo.url} width ={300} height ={200}  >
 
-              </img>
+             </Image>
               <p>
                   {blog.body}
               </p>
