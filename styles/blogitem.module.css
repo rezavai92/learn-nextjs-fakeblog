@@ -22,3 +22,21 @@
     padding : 5px;
 }
 
+.comments{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: lightcyan;
+    box-sizing: border-box;
+    padding: 25px;
+
+}
+
+.comments div{
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 5px;
+}
