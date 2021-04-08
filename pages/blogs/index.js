@@ -6,13 +6,15 @@ export const getStaticProps =async ()=>{
         try{
 
            const res= await fetch("https://jsonplaceholder.typicode.com/posts")
+           const photoRes = await fetch(`https://jsonplaceholder.typicode.com/photos`)
            const blogs = await res.json()
-        
-           console.log(res)
+            const photos = await photoRes.json()
+           
            return{
 
                 props :  {
-                    blogs
+                    blogs,
+                    photos
                 }
             }
     
@@ -24,11 +26,11 @@ export const getStaticProps =async ()=>{
         }
 
 }
-export default function Blogs({blogs}) {
+export default function Blogs({blogs,photos}) {
     return (
         <div>
             <h1 style={{textAlign:"center" , color :"blue" }} >Welcome to the blog section!</h1>
-            <BlogList blogs={blogs} />
+            <BlogList blogs={blogs} photos={photos} />
         </div>
     )
 }
